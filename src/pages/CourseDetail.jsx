@@ -160,11 +160,9 @@ const CourseDetail = () => {
                 <span>Course Overview</span>
               </h2>
               <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
-                <p className="text-lg text-gray-700 leading-relaxed italic">
-                  "
+                <p className="text-lg text-gray-700 leading-relaxed text-justify">
                   {course.overview ||
                     'Master the essential skills required for this industry with our expert-led training.'}
-                  "
                 </p>
 
                 {course.benefits && (

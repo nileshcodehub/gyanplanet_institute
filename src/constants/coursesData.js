@@ -7,7 +7,7 @@ export const COURSES = [
     description:
       'Master Microsoft Office Suite including Word, Excel, PowerPoint, and Outlook. Essential skills for any professional environment.',
     overview:
-      'This comprehensive MS Office course is designed to take you from a basic user to a proficient professional. You will master the most essential tools used in every office worldwide: Word for documentation, Excel for data management, and PowerPoint for impactful presentations.',
+      'This comprehensive MS Office course at Gyanplanet Institute is meticulously designed to transform you from a basic computer user into a highly proficient professional. In today’s competitive job market, mastery of the Microsoft Office Suite is essential for any administrative or data-driven role. Throughout this three-month program, you will dive deep into Word for professional documentation, Excel for advanced data analysis and formulas, and PowerPoint for impactful visual storytelling. We also cover Outlook for efficient communication and time management. By the end of this course, you will possess the technical expertise to automate routine tasks, organize information logically, and contribute significantly to any professional environment. Gain the confidence to handle complex office tasks with ease and efficiency.',
     benefits: [
       'Increased workplace productivity',
       'Better data organization and analysis skills',
@@ -95,7 +95,7 @@ export const COURSES = [
     description:
       'Learn complete accounting with Tally Prime including GST compliance, inventory management, and financial reporting.',
     overview:
-      'Step into the world of professional accounting with Tally Prime. This course covers everything from the basics of accounting to advanced GST compliance and inventory management, making you industry-ready for various finance roles.',
+      'Step into the world of professional accounting with our Tally Prime (GST) with Accounting course at Gyanplanet Institute. As the industry standard for Indian businesses, Tally Prime is essential for anyone pursuing a career in finance. This course bridges the gap between theoretical accounting and practical industry requirements. You will master the fundamentals of accounting before transitioning into practical Tally operations, including ledger management, inventory tracking, and bank reconciliation. A major focus is placed on GST compliance, where you will learn to handle tax calculations and generate reports like GSTR-1 and GSTR-3B with accuracy. Whether you are a graduate or a business owner, this course provides the software expertise and tax knowledge needed to navigate the financial professional landscape confidently.',
     benefits: [
       'Master GST compliance and filing',
       'Expertise in inventory management',
@@ -682,7 +682,7 @@ export const COURSES = [
     description:
       'Master Artificial Intelligence and Machine Learning. Learn to build AI models, work with Generative AI tools, and understand the future of technology.',
     overview:
-      'Unlock the potential of Artificial Intelligence. This course is designed for beginners to understand how AI works, how to use Generative AI tools like ChatGPT for productivity, and the fundamentals of machine learning.',
+      'Welcome to the future of technology with our "Learn AI" course at Gyanplanet Institute. Designed for beginners and professionals, this course demystifies Artificial Intelligence and its transformative impact across industries. You will explore core AI and Machine Learning concepts, understanding how neural networks learn from data. A significant highlight is our module on Generative AI, where you will master the art of Prompt Engineering to 10x your productivity. Learn to craft precise instructions for tools like ChatGPT and Gemini to automate tasks and generate high-quality content instantly. Beyond technical skills, we address AI ethics and practical implementation workflows. By the end of this intensive program, you will be equipped to leverage state-of-the-art AI tools to stay ahead in the rapidly evolving digital world.',
     benefits: [
       'Understand AI and ML fundamentals',
       'Master Prompt Engineering',
