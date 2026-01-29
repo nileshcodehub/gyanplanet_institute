@@ -1,10 +1,22 @@
 export const COURSES = [
   {
     id: 1,
+    slug: 'ms-office',
     name: 'MS-Office',
     logo: 'https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=400&h=300&fit=crop&crop=center&q=75',
     description:
       'Master Microsoft Office Suite including Word, Excel, PowerPoint, and Outlook. Essential skills for any professional environment.',
+    overview:
+      'This comprehensive MS Office course is designed to take you from a basic user to a proficient professional. You will master the most essential tools used in every office worldwide: Word for documentation, Excel for data management, and PowerPoint for impactful presentations.',
+    benefits: [
+      'Increased workplace productivity',
+      'Better data organization and analysis skills',
+      'Professional document and report creation',
+      'Enhanced career prospects in any industry',
+      'Mastery of essential office automation',
+    ],
+    whoShouldEnroll:
+      'Students, Job Seekers, Working Professionals, Data Entry Operators, and anyone looking to improve their computer literacy.',
     duration: '3 months',
     fee: '₹3,000',
     monthlyFee: '₹1,000',
@@ -13,6 +25,56 @@ export const COURSES = [
       'Spreadsheets',
       'Presentations',
       'Email Management',
+    ],
+    syllabus: [
+      {
+        module: 'Microsoft Word',
+        topics: [
+          'Interface & Basic Formatting',
+          'Styles & Templates',
+          'Tables & Images',
+          'Mail Merge',
+          'Page Layout & Printing',
+        ],
+      },
+      {
+        module: 'Microsoft Excel',
+        topics: [
+          'Cell Referencing & Basic Formulas',
+          'Data Sorting & Filtering',
+          'PivotTables & Charts',
+          'VLOOKUP & HLOOKUP',
+          'Conditional Formatting',
+        ],
+      },
+      {
+        module: 'Microsoft PowerPoint',
+        topics: [
+          'Slide Design & Layouts',
+          'Transitions & Animations',
+          'SmartArt & Multimedia',
+          'Presenting Tips',
+        ],
+      },
+    ],
+    careerOpportunities: [
+      'Administrative Assistant',
+      'Data Entry Operator',
+      'Back Office Executive',
+      'Office Coordinator',
+      'Customer Support Executive',
+    ],
+    resources: {
+      free: ['GCFGlobal Free Tutorials', 'Microsoft Support Templates'],
+      paid: ['Microsoft 365 Personal', 'Advance Excel Certification'],
+      online: ['Excel Online (Free)', 'Word for Web'],
+      offline: ['Physical Practice Workbook'],
+    },
+    installationGuide:
+      '1. Download the Office Setup from the official Microsoft portal.\n2. Run the installer and sign in with your Microsoft account.\n3. Follow the on-screen instructions to complete the setup.',
+    alternatives: [
+      { name: 'LibreOffice (Free)', link: 'https://www.libreoffice.org/' },
+      { name: 'Google Workspace', link: 'https://workspace.google.com/' },
     ],
     category: ['Office', 'Technology'],
     searchKeys: [
@@ -27,10 +89,22 @@ export const COURSES = [
   },
   {
     id: 2,
+    slug: 'tally-prime',
     name: 'Tally Prime (GST) with Accounting',
     logo: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=400&h=300&fit=crop&crop=center&q=75',
     description:
       'Learn complete accounting with Tally Prime including GST compliance, inventory management, and financial reporting.',
+    overview:
+      'Step into the world of professional accounting with Tally Prime. This course covers everything from the basics of accounting to advanced GST compliance and inventory management, making you industry-ready for various finance roles.',
+    benefits: [
+      'Master GST compliance and filing',
+      'Expertise in inventory management',
+      'Ability to generate accurate financial reports',
+      'Understanding of banking and payroll in Tally',
+      'Direct job readiness for accounting roles',
+    ],
+    whoShouldEnroll:
+      'Commerce Graduates, Accountants, Business Owners, and professionals aiming for a career in finance or auditing.',
     duration: '3 months',
     fee: '₹4,500',
     monthlyFee: '₹1,500',
@@ -39,6 +113,59 @@ export const COURSES = [
       'Inventory Management',
       'Financial Reports',
       'Tax Filing',
+    ],
+    syllabus: [
+      {
+        module: 'Accounting Fundamentals',
+        topics: [
+          'Golden Rules of Accounting',
+          'Double Entry System',
+          'Ledger & Groups',
+        ],
+      },
+      {
+        module: 'Tally Essentials',
+        topics: [
+          'Company Creation',
+          'Voucher Entry (Purchase/Sales)',
+          'Bank Reconciliation',
+        ],
+      },
+      {
+        module: 'GST & Taxation',
+        topics: [
+          'GST Ledger Setup',
+          'GSTR-1 & GSTR-3B Internal Reports',
+          'TDS & TCS Basics',
+        ],
+      },
+      {
+        module: 'Inventory & Payroll',
+        topics: [
+          'Stock Items & Godowns',
+          'Cost Centers',
+          'Employee Payroll Management',
+        ],
+      },
+    ],
+    careerOpportunities: [
+      'Accounts Assistant',
+      'Junior Accountant',
+      'GST Consultant',
+      'Tally Operator',
+      'Inventory Manager',
+    ],
+    resources: {
+      free: ['Tally Solutions Official Guide', 'GST Portal Tutorials'],
+      paid: ['Tally Prime License', 'Advanced GST Masterclass'],
+      online: ['Tally Online Support', 'YouTube Live Classes'],
+      offline: ['Tally Practice Sets'],
+    },
+    installationGuide:
+      '1. Download Tally Prime from TallySolutions.com.\n2. Install the setup and choose Educational Mode for practice.\n3. Create your first company to start practice.',
+    alternatives: [
+      { name: 'Zoho Books', link: 'https://www.zoho.com/in/books/' },
+      { name: 'Busy Accounting', link: 'https://busy.in/' },
     ],
     category: ['Accounting'],
     searchKeys: [
@@ -52,6 +179,7 @@ export const COURSES = [
   },
   {
     id: 3,
+    slug: 'adobe-photoshop',
     name: 'Adobe Photoshop',
     logo: 'https://images.unsplash.com/photo-1572044162444-ad60f128bdea?w=400&h=300&fit=crop&crop=center&q=75',
     description:
@@ -75,6 +203,7 @@ export const COURSES = [
   },
   {
     id: 4,
+    slug: 'adobe-coreldraw',
     name: 'Adobe CorelDraw',
     logo: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?w=400&h=300&fit=crop&crop=center&q=75',
     description:
@@ -98,6 +227,7 @@ export const COURSES = [
   },
   {
     id: 5,
+    slug: 'adobe-illustrator',
     name: 'Adobe Illustrator',
     logo: 'https://images.unsplash.com/photo-1609921212029-bb5a28e60960?w=400&h=300&fit=crop&crop=center&q=75',
     description:
@@ -121,6 +251,7 @@ export const COURSES = [
   },
   {
     id: 6,
+    slug: 'adobe-indesign',
     name: 'Adobe InDesign',
     logo: 'https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=400&h=300&fit=crop&crop=center&q=75',
     description:
@@ -144,6 +275,7 @@ export const COURSES = [
   },
   {
     id: 7,
+    slug: 'advanced-excel',
     name: 'Advanced Excel with AI & ChatGPT',
     logo: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop&crop=center&q=75',
     description:
@@ -169,6 +301,7 @@ export const COURSES = [
   },
   {
     id: 8,
+    slug: 'hindi-english-typing',
     name: 'Hindi & English Typing',
     logo: 'https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=400&h=300&fit=crop&crop=center&q=75',
     description:
@@ -193,6 +326,7 @@ export const COURSES = [
   },
   {
     id: 9,
+    slug: 'autocad-2d-3d',
     name: 'AutoCAD 2D & 3D',
     logo: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=100&h=100&fit=crop&crop=center',
     description:
@@ -217,6 +351,7 @@ export const COURSES = [
   },
   {
     id: 10,
+    slug: 'c-cpp-programming',
     name: 'C & C++ Programming',
     logo: 'https://images.unsplash.com/photo-1627398242454-45a1465c2479?w=100&h=100&fit=crop&crop=center',
     description:
@@ -241,6 +376,7 @@ export const COURSES = [
   },
   {
     id: 11,
+    slug: 'java-programming',
     name: 'Java Programming',
     logo: 'https://images.unsplash.com/photo-1627398242454-45a1465c2479?w=100&h=100&fit=crop&crop=center',
     description:
@@ -265,6 +401,7 @@ export const COURSES = [
   },
   {
     id: 12,
+    slug: 'python-programming',
     name: 'Python Programming',
     logo: 'https://images.unsplash.com/photo-1627398242454-45a1465c2479?w=100&h=100&fit=crop&crop=center',
     description:
@@ -289,6 +426,7 @@ export const COURSES = [
   },
   {
     id: 13,
+    slug: 'advanced-internet',
     name: 'Advanced Internet',
     logo: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=100&h=100&fit=crop&crop=center',
     description:
@@ -314,6 +452,7 @@ export const COURSES = [
   },
   {
     id: 14,
+    slug: 'video-editing',
     name: 'Video Editing',
     logo: 'https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=100&h=100&fit=crop&crop=center',
     description:
@@ -339,6 +478,7 @@ export const COURSES = [
   },
   {
     id: 15,
+    slug: 'data-analytics',
     name: 'Data Analytics',
     logo: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=100&h=100&fit=crop&crop=center',
     description:
@@ -364,6 +504,7 @@ export const COURSES = [
   },
   {
     id: 16,
+    slug: 'sap-course',
     name: 'SAP Course',
     logo: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=100&h=100&fit=crop&crop=center',
     description:
@@ -382,6 +523,7 @@ export const COURSES = [
   },
   {
     id: 17,
+    slug: 'web-development',
     name: 'Web Development',
     logo: 'https://images.unsplash.com/photo-1627398242454-45a1465c2479?w=100&h=100&fit=crop&crop=center',
     description:
@@ -409,6 +551,7 @@ export const COURSES = [
   },
   {
     id: 18,
+    slug: 'revit',
     name: 'Revit',
     logo: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=100&h=100&fit=crop&crop=center',
     description:
@@ -433,6 +576,7 @@ export const COURSES = [
   },
   {
     id: 19,
+    slug: 'nx-cad',
     name: 'NX-CAD',
     logo: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=100&h=100&fit=crop&crop=center',
     description:
@@ -457,6 +601,7 @@ export const COURSES = [
   },
   {
     id: 20,
+    slug: 'stenography-course',
     name: 'Stenography Course',
     logo: 'https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=100&h=100&fit=crop&crop=center',
     description:
@@ -481,6 +626,7 @@ export const COURSES = [
   },
   {
     id: 21,
+    slug: 'spoken-english',
     name: 'Spoken English',
     logo: 'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=100&h=100&fit=crop&crop=center',
     description:
@@ -505,6 +651,7 @@ export const COURSES = [
   },
   {
     id: 22,
+    slug: 'computer-hardware',
     name: 'Computer Hardware',
     logo: 'https://images.unsplash.com/photo-1518717758536-85ae29035b6d?w=100&h=100&fit=crop&crop=center',
     description:
@@ -529,10 +676,22 @@ export const COURSES = [
   },
   {
     id: 23,
+    slug: 'learn-ai',
     name: 'Learn AI',
     logo: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&h=300&fit=crop&crop=center&q=75',
     description:
       'Master Artificial Intelligence and Machine Learning. Learn to build AI models, work with Generative AI tools, and understand the future of technology.',
+    overview:
+      'Unlock the potential of Artificial Intelligence. This course is designed for beginners to understand how AI works, how to use Generative AI tools like ChatGPT for productivity, and the fundamentals of machine learning.',
+    benefits: [
+      'Understand AI and ML fundamentals',
+      'Master Prompt Engineering',
+      'Build AI-powered workflows',
+      'Explore Generative AI tools',
+      'Stay ahead in the evolving tech landscape',
+    ],
+    whoShouldEnroll:
+      'Students, Developers, Business Leaders, and anyone curious about the future of technology.',
     duration: '1 months',
     fee: '₹6,000',
     monthlyFee: '₹6,000',
@@ -541,6 +700,50 @@ export const COURSES = [
       'Neural Networks',
       'Generative AI',
       'AI Ethics',
+    ],
+    syllabus: [
+      {
+        module: 'AI Fundamentals',
+        topics: [
+          'History of AI',
+          'Types of Machine Learning',
+          'Neural Network Basics',
+        ],
+      },
+      {
+        module: 'Generative AI',
+        topics: [
+          'LLMs & Transformers',
+          'Prompt Engineering',
+          'ChatGPT & Gemini Mastery',
+        ],
+      },
+      {
+        module: 'Practical AI Tools',
+        topics: [
+          'Midjourney/DALL-E Basics',
+          'AI for Productivity',
+          'Automation with AI',
+        ],
+      },
+    ],
+    careerOpportunities: [
+      'AI Prompt Engineer',
+      'AI Implementation Consultant',
+      'Data Science Associate',
+      'Automation Specialist',
+    ],
+    resources: {
+      free: ['DeepLearning.AI Courses', 'Microsoft AI for Beginners'],
+      paid: ['ChatGPT Plus Subscription', 'Coursera AI Certifications'],
+      online: ['Hugging Face Hub', 'Google Colab'],
+      offline: ['AI Ethics Workshops'],
+    },
+    installationGuide:
+      '1. Access tools like ChatGPT and Gemini online.\n2. For coding, set up Python and Jupyter Notebooks.\n3. Explore open-source models on Hugging Face.',
+    alternatives: [
+      { name: 'Claude.ai', link: 'https://claude.ai/' },
+      { name: 'Perplexity AI', link: 'https://www.perplexity.ai/' },
     ],
     category: ['AI'],
     searchKeys: [

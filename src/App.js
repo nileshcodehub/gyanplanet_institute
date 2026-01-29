@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import Courses from './pages/Courses';
 import Books from './pages/Books';
 import Contact from './pages/Contact';
+import CourseDetail from './pages/CourseDetail';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import './App.css';
 
@@ -22,6 +23,7 @@ function App() {
               <Route path="/courses" element={<Courses />} />
               <Route path="/books" element={<Books />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/courses/:slug" element={<CourseDetail />} />
             </Routes>
           </main>
           <Footer />

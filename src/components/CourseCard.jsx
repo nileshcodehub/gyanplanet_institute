@@ -1,6 +1,8 @@
+import { Link } from 'react-router-dom';
 import {
   PhoneIcon,
   ChatBubbleLeftRightIcon,
+  ArrowRightIcon,
 } from '@heroicons/react/24/outline';
 import { SITE_INFO } from '../constants/siteData';
 import LazyImage from './LazyImage';
@@ -98,6 +100,15 @@ const CourseCard = ({ course }) => {
             <span>WhatsApp</span>
           </button>
         </div>
+
+        {/* View Details Link */}
+        <Link
+          to={`/courses/${course.slug}`}
+          className="mt-4 flex items-center justify-center space-x-2 text-primary-600 hover:text-primary-700 font-semibold py-2 transition-colors duration-200 border-t border-gray-100"
+        >
+          <span>View Detailed Course Info</span>
+          <ArrowRightIcon className="h-4 w-4" />
+        </Link>
       </div>
     </div>
   );
