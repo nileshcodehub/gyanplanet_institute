@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 import { MagnifyingGlassIcon } from '@heroicons/react/24/outline';
 import SEO from '../components/SEO';
 import CourseCard from '../components/CourseCard';
@@ -8,19 +8,21 @@ const Courses = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
 
-  // Get unique categories
   // Get dynamic categories based on search
-  const categories = [
-    'All',
-    ...new Set(
-      COURSES.filter(course => {
-        const searchLow = searchTerm.toLowerCase();
-        return course.searchKeys?.some(key =>
-          key.toLowerCase().includes(searchLow)
-        );
-      }).map(course => course.category)
-    ),
-  ];
+  const categories = useMemo(() => {
+    console.log(
+      'categories',
+      COURSES.flatMap(course => course.category)
+    );
+    return [
+      'All',
+      ...new Set(
+        COURSES.flatMap(course => course.category)
+          .map(cat => cat.trim())
+          .filter(Boolean)
+      ),
+    ];
+  }, []);
 
   // Filter courses based on search and category
   const filteredCourses = COURSES.filter(course => {
@@ -28,14 +30,14 @@ const Courses = () => {
     const matchesSearch =
       course.name.toLowerCase().includes(searchLow) ||
       course.description.toLowerCase().includes(searchLow) ||
-      course.category.toLowerCase().includes(searchLow) ||
+      course.category.some(cat => cat.toLowerCase().includes(searchLow)) ||
       course.searchKeys?.some(key => key.toLowerCase().includes(searchLow)) ||
       course.features?.some(feature =>
         feature.toLowerCase().includes(searchLow)
       );
 
     const matchesCategory =
-      selectedCategory === 'All' || course.category === selectedCategory;
+      selectedCategory === 'All' || course.category.includes(selectedCategory);
     return matchesSearch && matchesCategory;
   });
 

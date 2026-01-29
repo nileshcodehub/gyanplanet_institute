@@ -1,6 +1,6 @@
 export const SITE_INFO = {
   name: 'Gyanplanet Institute',
-  tagline: 'Empowering Minds, Shaping Futures',
+  tagline: 'To Be The Best, Join The Best',
   description:
     'Leading educational institute providing quality courses and resources for students to excel in their academic and professional journey.',
   email: 'info@gyanplanetinstitute.com',
@@ -43,7 +43,7 @@ export const COURSES = [
       'Presentations',
       'Email Management',
     ],
-    category: 'Office',
+    category: ['Office', 'Technology'],
     searchKeys: [
       'Office',
       'MS Office',
@@ -69,7 +69,7 @@ export const COURSES = [
       'Financial Reports',
       'Tax Filing',
     ],
-    category: 'Accounting',
+    category: ['Accounting'],
     searchKeys: [
       'Accounting',
       'Tally',
@@ -93,7 +93,7 @@ export const COURSES = [
       'Layer Management',
       'Color Correction',
     ],
-    category: 'Design',
+    category: ['Design'],
     searchKeys: [
       'Design',
       'Photoshop',
@@ -116,7 +116,7 @@ export const COURSES = [
       'Illustrations',
       'Print Design',
     ],
-    category: 'Design',
+    category: ['Design'],
     searchKeys: [
       'Design',
       'CorelDraw',
@@ -139,7 +139,7 @@ export const COURSES = [
       'Typography',
       'Brand Design',
     ],
-    category: 'Design',
+    category: ['Design'],
     searchKeys: [
       'Design',
       'Illustrator',
@@ -162,7 +162,7 @@ export const COURSES = [
       'Print Design',
       'Digital Publishing',
     ],
-    category: 'Design',
+    category: ['Design'],
     searchKeys: [
       'Design',
       'InDesign',
@@ -186,7 +186,7 @@ export const COURSES = [
       'AI Integration',
       'Automation',
     ],
-    category: 'Technology',
+    category: ['Technology'],
     searchKeys: [
       'Excel',
       'Advanced Excel',
@@ -211,7 +211,7 @@ export const COURSES = [
       'Bilingual Typing',
       'Practice Tests',
     ],
-    category: 'Office',
+    category: ['Office'],
     searchKeys: [
       'Typing',
       'Hindi Typing',
@@ -235,7 +235,7 @@ export const COURSES = [
       'Technical Drawing',
       'Engineering Design',
     ],
-    category: 'Engineering',
+    category: ['Engineering'],
     searchKeys: [
       'Engineering',
       'AutoCAD',
@@ -259,7 +259,7 @@ export const COURSES = [
       'Object-Oriented Programming',
       'System Programming',
     ],
-    category: 'Programming',
+    category: ['Programming'],
     searchKeys: [
       'Programming',
       'C Language',
@@ -283,7 +283,7 @@ export const COURSES = [
       'Spring Framework',
       'Database Integration',
     ],
-    category: 'Programming',
+    category: ['Programming'],
     searchKeys: [
       'Programming',
       'Java',
@@ -307,7 +307,7 @@ export const COURSES = [
       'Automation',
       'Machine Learning Basics',
     ],
-    category: 'Programming',
+    category: ['Programming'],
     searchKeys: [
       'Programming',
       'Python',
@@ -331,7 +331,7 @@ export const COURSES = [
       'Digital Communication',
       'Online Security',
     ],
-    category: 'Technology',
+    category: ['Technology'],
     searchKeys: [
       'Technology',
       'Internet',
@@ -356,7 +356,7 @@ export const COURSES = [
       'Audio Editing',
       'Motion Graphics',
     ],
-    category: 'Media',
+    category: ['Media'],
     searchKeys: [
       'Media',
       'Video Editing',
@@ -381,7 +381,7 @@ export const COURSES = [
       'Statistical Analysis',
       'Business Intelligence',
     ],
-    category: 'Analytics',
+    category: ['Analytics'],
     searchKeys: [
       'Analytics',
       'Data Analysis',
@@ -406,7 +406,7 @@ export const COURSES = [
       'SAP Modules',
       'Enterprise Solutions',
     ],
-    category: 'Enterprise',
+    category: ['Enterprise'],
     searchKeys: ['Enterprise', 'SAP', 'ERP', 'Business Process', 'Management'],
   },
   {
@@ -424,7 +424,7 @@ export const COURSES = [
       'React/Angular',
       'Backend Development',
     ],
-    category: 'Programming',
+    category: ['Programming'],
     searchKeys: [
       'Programming',
       'Web Development',
@@ -451,7 +451,7 @@ export const COURSES = [
       'MEP Systems',
       'Project Documentation',
     ],
-    category: 'Architecture',
+    category: ['Architecture'],
     searchKeys: [
       'Architecture',
       'Revit',
@@ -475,7 +475,7 @@ export const COURSES = [
       'Engineering Design',
       'Manufacturing',
     ],
-    category: 'Engineering',
+    category: ['Engineering'],
     searchKeys: [
       'Engineering',
       'NX-CAD',
@@ -499,7 +499,7 @@ export const COURSES = [
       'Court Reporting',
       'Professional Documentation',
     ],
-    category: 'Office',
+    category: ['Office'],
     searchKeys: [
       'Office',
       'Stenography',
@@ -523,7 +523,7 @@ export const COURSES = [
       'Grammar',
       'Confidence Building',
     ],
-    category: 'Language',
+    category: ['Language'],
     searchKeys: [
       'Language',
       'English',
@@ -547,7 +547,7 @@ export const COURSES = [
       'Component Knowledge',
       'Repair Techniques',
     ],
-    category: 'Hardware',
+    category: ['Hardware'],
     searchKeys: [
       'Hardware',
       'Computer Repair',
@@ -562,16 +562,16 @@ export const COURSES = [
     logo: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&h=300&fit=crop&crop=center&q=75',
     description:
       'Master Artificial Intelligence and Machine Learning. Learn to build AI models, work with Generative AI tools, and understand the future of technology.',
-    duration: '3 months',
+    duration: '1 months',
     fee: '₹6,000',
-    monthlyFee: '₹2,000',
+    monthlyFee: '₹6,000',
     features: [
       'Machine Learning',
       'Neural Networks',
       'Generative AI',
       'AI Ethics',
     ],
-    category: 'AI',
+    category: ['AI'],
     searchKeys: [
       'AI',
       'Artificial Intelligence',
@@ -597,7 +597,7 @@ export const BOOKS = [
     author: 'Gyanplanet Institute',
     pages: 350,
     downloadUrl: 'https://imojo.in/tallyprime5',
-    category: 'Accounting',
+    category: ['Accounting'],
     rating: 4.8,
     reviews: 156,
     searchKeys: [
@@ -624,7 +624,7 @@ export const BOOKS = [
     author: 'Gyanplanet Institute',
     pages: 320,
     downloadUrl: 'https://imojo.in/prime',
-    category: 'Accounting',
+    category: ['Accounting'],
     rating: 4.7,
     reviews: 142,
     searchKeys: [
@@ -652,7 +652,7 @@ export const BOOKS = [
     pages: 200,
     downloadUrl:
       'https://officialnimitcomputers.myinstamojo.com/product/150-excel-formula-and-function-xlsx-file-wit',
-    category: 'Office',
+    category: ['Office'],
     rating: 4.9,
     reviews: 298,
     searchKeys: [
@@ -677,7 +677,7 @@ export const BOOKS = [
     author: 'Gyanplanet Institute',
     pages: 280,
     downloadUrl: 'https://imojo.in/computerconcept',
-    category: 'Computer Basics',
+    category: ['Computer Basics'],
     rating: 4.6,
     reviews: 187,
     searchKeys: [
@@ -701,7 +701,7 @@ export const BOOKS = [
     author: 'Gyanplanet Institute',
     pages: 250,
     downloadUrl: 'https://imojo.in/photoshop7',
-    category: 'Design',
+    category: ['Design'],
     rating: 4.5,
     reviews: 134,
     searchKeys: [
@@ -726,7 +726,7 @@ export const BOOKS = [
     author: 'Gyanplanet Institute',
     pages: 240,
     downloadUrl: 'https://imojo.in/CorelDraw',
-    category: 'Design',
+    category: ['Design'],
     rating: 4.4,
     reviews: 98,
     searchKeys: [
@@ -753,7 +753,7 @@ export const BOOKS = [
     author: 'Gyanplanet Institute',
     pages: 150,
     downloadUrl: 'https://imojo.in/manualtyping',
-    category: 'Office',
+    category: ['Office'],
     rating: 4.3,
     reviews: 76,
     searchKeys: [

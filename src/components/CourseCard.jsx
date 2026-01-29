@@ -1,4 +1,7 @@
-import { PhoneIcon, ChatBubbleLeftRightIcon } from '@heroicons/react/24/outline';
+import {
+  PhoneIcon,
+  ChatBubbleLeftRightIcon,
+} from '@heroicons/react/24/outline';
 import { SITE_INFO } from '../constants/siteData';
 import LazyImage from './LazyImage';
 
@@ -26,9 +29,16 @@ const CourseCard = ({ course }) => {
           />
           <div>
             <h3 className="text-xl font-bold text-gray-900">{course.name}</h3>
-            <span className="inline-block px-3 py-1 text-xs font-medium bg-primary-100 text-primary-800 rounded-full">
-              {course.category}
-            </span>
+            <div className="flex flex-wrap gap-2 mt-1">
+              {course.category.map((cat, index) => (
+                <span
+                  key={index}
+                  className="inline-block px-3 py-1 text-xs font-medium bg-primary-100 text-primary-800 rounded-full"
+                >
+                  {cat}
+                </span>
+              ))}
+            </div>
           </div>
         </div>
 
@@ -37,7 +47,9 @@ const CourseCard = ({ course }) => {
 
         {/* Features */}
         <div className="mb-4">
-          <h4 className="text-sm font-semibold text-gray-900 mb-2">What you'll learn:</h4>
+          <h4 className="text-sm font-semibold text-gray-900 mb-2">
+            What you'll learn:
+          </h4>
           <div className="flex flex-wrap gap-2">
             {course.features.map((feature, index) => (
               <span
