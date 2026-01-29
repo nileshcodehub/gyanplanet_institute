@@ -9,16 +9,31 @@ const Courses = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
 
   // Get unique categories
+  // Get dynamic categories based on search
   const categories = [
     'All',
-    ...new Set(COURSES.map(course => course.category)),
+    ...new Set(
+      COURSES.filter(course => {
+        const searchLow = searchTerm.toLowerCase();
+        return course.searchKeys?.some(key =>
+          key.toLowerCase().includes(searchLow)
+        );
+      }).map(course => course.category)
+    ),
   ];
 
   // Filter courses based on search and category
   const filteredCourses = COURSES.filter(course => {
-    const matchesSearch = course.searchKeys.some(key =>
-      key.toLowerCase().includes(searchTerm.toLowerCase())
-    );
+    const searchLow = searchTerm.toLowerCase();
+    const matchesSearch =
+      course.name.toLowerCase().includes(searchLow) ||
+      course.description.toLowerCase().includes(searchLow) ||
+      course.category.toLowerCase().includes(searchLow) ||
+      course.searchKeys?.some(key => key.toLowerCase().includes(searchLow)) ||
+      course.features?.some(feature =>
+        feature.toLowerCase().includes(searchLow)
+      );
+
     const matchesCategory =
       selectedCategory === 'All' || course.category === selectedCategory;
     return matchesSearch && matchesCategory;

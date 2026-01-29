@@ -10,13 +10,31 @@ const Books = () => {
   const [sortBy, setSortBy] = useState('title');
 
   // Get unique categories
-  const categories = ['All', ...new Set(BOOKS.map(book => book.category))];
+  // Get dynamic categories based on search
+  const categories = [
+    'All',
+    ...new Set(
+      BOOKS.filter(book => {
+        const searchLow = searchTerm.toLowerCase();
+        return (
+          book.title.toLowerCase().includes(searchLow) ||
+          book.description.toLowerCase().includes(searchLow) ||
+          book.searchKeys?.some(key => key.toLowerCase().includes(searchLow))
+        );
+      }).map(book => book.category)
+    ),
+  ];
 
   // Filter and sort books
   const filteredAndSortedBooks = BOOKS.filter(book => {
-    const matchesSearch = book.searchKeys.some(item =>
-      item.toLowerCase().includes(searchTerm.toLowerCase())
-    );
+    const searchLow = searchTerm.toLowerCase();
+    const matchesSearch =
+      book.title.toLowerCase().includes(searchLow) ||
+      book.description.toLowerCase().includes(searchLow) ||
+      book.author.toLowerCase().includes(searchLow) ||
+      book.category.toLowerCase().includes(searchLow) ||
+      book.searchKeys?.some(item => item.toLowerCase().includes(searchLow));
+
     const matchesCategory =
       selectedCategory === 'All' || book.category === selectedCategory;
     return matchesSearch && matchesCategory;
