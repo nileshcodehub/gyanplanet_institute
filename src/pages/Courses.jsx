@@ -9,20 +9,28 @@ const Courses = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
 
   // Get dynamic categories based on search
+  // Get dynamic categories based on search
   const categories = useMemo(() => {
-    console.log(
-      'categories',
-      COURSES.flatMap(course => course.category)
-    );
     return [
       'All',
       ...new Set(
-        COURSES.flatMap(course => course.category)
+        COURSES.filter(course => {
+          if (!searchTerm) return true;
+          const searchLow = searchTerm.toLowerCase();
+          return (
+            course.name.toLowerCase().includes(searchLow) ||
+            course.description.toLowerCase().includes(searchLow) ||
+            course.searchKeys?.some(key =>
+              key.toLowerCase().includes(searchLow)
+            )
+          );
+        })
+          .flatMap(course => course.category)
           .map(cat => cat.trim())
           .filter(Boolean)
       ),
-    ];
-  }, []);
+    ].sort((a, b) => (a === 'All' ? -1 : b === 'All' ? 1 : a.localeCompare(b)));
+  }, [searchTerm]);
 
   // Filter courses based on search and category
   const filteredCourses = COURSES.filter(course => {

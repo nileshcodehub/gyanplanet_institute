@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 import { MagnifyingGlassIcon, BookOpenIcon } from '@heroicons/react/24/outline';
 import SEO from '../components/SEO';
 import BookCard from '../components/BookCard';
@@ -10,24 +10,26 @@ const Books = () => {
   const [sortBy, setSortBy] = useState('title');
 
   // Get dynamic categories based on search
-  const categories = [
-    'All',
-    ...new Set(
-      BOOKS.filter(book => {
-        if (!searchTerm) return true;
-        const searchLow = searchTerm.toLowerCase();
-        return (
-          book.title.toLowerCase().includes(searchLow) ||
-          book.description.toLowerCase().includes(searchLow) ||
-          book.author.toLowerCase().includes(searchLow) ||
-          book.searchKeys?.some(key => key.toLowerCase().includes(searchLow))
-        );
-      })
-        .flatMap(book => book.category)
-        .map(cat => cat.trim())
-        .filter(Boolean)
-    ),
-  ].sort((a, b) => (a === 'All' ? -1 : b === 'All' ? 1 : a.localeCompare(b)));
+  const categories = useMemo(() => {
+    return [
+      'All',
+      ...new Set(
+        BOOKS.filter(book => {
+          if (!searchTerm) return true;
+          const searchLow = searchTerm.toLowerCase();
+          return (
+            book.title.toLowerCase().includes(searchLow) ||
+            book.description.toLowerCase().includes(searchLow) ||
+            book.author.toLowerCase().includes(searchLow) ||
+            book.searchKeys?.some(key => key.toLowerCase().includes(searchLow))
+          );
+        })
+          .flatMap(book => book.category)
+          .map(cat => cat.trim())
+          .filter(Boolean)
+      ),
+    ].sort((a, b) => (a === 'All' ? -1 : b === 'All' ? 1 : a.localeCompare(b)));
+  }, [searchTerm]);
 
   // Filter and sort books
   const filteredAndSortedBooks = BOOKS.filter(book => {

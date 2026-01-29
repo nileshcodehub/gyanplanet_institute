@@ -6,9 +6,10 @@ export const SITE_INFO = {
   email: 'info@gyanplanetinstitute.com',
   phone: '+91-9876543210',
   whatsapp: '+919876543210',
-  address: '123 Education Street, Knowledge City, Learning State - 123456',
+  address:
+    '26/18, near Tikona Park, Laxmi Garden, Sector 11, Gurugram, Haryana 122001',
   mapUrl:
-    'https://maps.google.com/embed?pb=!1m18!1m12!1m3!1d3024.123456789!2d-74.0059413!3d40.7127753!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDQyJzQ2LjAiTiA3NMKwMDAnMjEuNCJX!5e0!3m2!1sen!2sus!4v1234567890123',
+    'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14031.52883364587!2d77.017513!3d28.452967!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d19b1c3c0944d%3A0x4cc5763d6b94a0dd!2sGyanplanet%20Institute%20-%20FREE%20trial%20classes%20and%20affordable%20pricing!5e0!3m2!1sen!2sin!4v1769693072336!5m2!1sen!2sin',
   socialMedia: {
     facebook: 'https://facebook.com/gyanplanetinstitute',
     twitter: 'https://twitter.com/gyanplanet',

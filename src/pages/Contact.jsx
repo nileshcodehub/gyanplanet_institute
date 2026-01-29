@@ -6,36 +6,38 @@ import {
   EnvelopeIcon,
   ClockIcon,
   CheckCircleIcon,
-  ExclamationCircleIcon
+  ExclamationCircleIcon,
 } from '@heroicons/react/24/outline';
 import SEO from '../components/SEO';
-import { SITE_INFO } from '../constants/siteData';
+import { SITE_INFO, COURSES } from '../constants/siteData';
 
 const serviceId = process.env.REACT_APP_EMAILJS_SERVICE_ID;
 const templateId = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
 const publicKey = process.env.REACT_APP_EMAILJS_PUBLIC_KEY;
 
-
 const Contact = () => {
+  const sortedCourses = [...COURSES].sort((a, b) =>
+    a.name.localeCompare(b.name)
+  );
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     phone: '',
     subject: '',
     message: '',
-    course: ''
+    course: '',
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null);
 
-  const handleChange = (e) => {
+  const handleChange = e => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async e => {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus(null);
@@ -54,7 +56,7 @@ const Contact = () => {
           subject: formData.subject,
           message: formData.message,
           course: formData.course,
-          to_email: SITE_INFO.email
+          to_email: SITE_INFO.email,
         }
       );
 
@@ -66,7 +68,7 @@ const Contact = () => {
           phone: '',
           subject: '',
           message: '',
-          course: ''
+          course: '',
         });
       }
     } catch (error) {
@@ -94,8 +96,9 @@ const Contact = () => {
                 Contact Us
               </h1>
               <p className="text-lg sm:text-xl opacity-90 max-w-2xl mx-auto px-4">
-                Ready to start your learning journey? Get in touch with us today.
-                We're here to help you choose the right course for your goals.
+                Ready to start your learning journey? Get in touch with us
+                today. We're here to help you choose the right course for your
+                goals.
               </p>
             </div>
           </div>
@@ -107,26 +110,40 @@ const Contact = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12">
               {/* Contact Form */}
               <div className="bg-white rounded-xl shadow-lg p-6 sm:p-8">
-                <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 sm:mb-6">Send us a Message</h2>
+                <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 sm:mb-6">
+                  Send us a Message
+                </h2>
 
                 {submitStatus === 'success' && (
                   <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg flex items-center space-x-3">
                     <CheckCircleIcon className="h-5 w-5 text-green-600" />
-                    <p className="text-green-800">Thank you! Your message has been sent successfully. We'll get back to you soon.</p>
+                    <p className="text-green-800">
+                      Thank you! Your message has been sent successfully. We'll
+                      get back to you soon.
+                    </p>
                   </div>
                 )}
 
                 {submitStatus === 'error' && (
                   <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg flex items-center space-x-3">
                     <ExclamationCircleIcon className="h-5 w-5 text-red-600" />
-                    <p className="text-red-800">Sorry, there was an error sending your message. Please try again or contact us directly.</p>
+                    <p className="text-red-800">
+                      Sorry, there was an error sending your message. Please try
+                      again or contact us directly.
+                    </p>
                   </div>
                 )}
 
-                <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
+                <form
+                  onSubmit={handleSubmit}
+                  className="space-y-4 sm:space-y-6"
+                >
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                     <div>
-                      <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                      <label
+                        htmlFor="name"
+                        className="block text-sm font-medium text-gray-700 mb-2"
+                      >
                         Full Name *
                       </label>
                       <input
@@ -141,7 +158,10 @@ const Contact = () => {
                       />
                     </div>
                     <div>
-                      <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                      <label
+                        htmlFor="email"
+                        className="block text-sm font-medium text-gray-700 mb-2"
+                      >
                         Email Address *
                       </label>
                       <input
@@ -159,7 +179,10 @@ const Contact = () => {
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                     <div>
-                      <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
+                      <label
+                        htmlFor="phone"
+                        className="block text-sm font-medium text-gray-700 mb-2"
+                      >
                         Phone Number
                       </label>
                       <input
@@ -173,7 +196,10 @@ const Contact = () => {
                       />
                     </div>
                     <div>
-                      <label htmlFor="course" className="block text-sm font-medium text-gray-700 mb-2">
+                      <label
+                        htmlFor="course"
+                        className="block text-sm font-medium text-gray-700 mb-2"
+                      >
                         Interested Course
                       </label>
                       <select
@@ -184,19 +210,21 @@ const Contact = () => {
                         className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent text-sm sm:text-base"
                       >
                         <option value="">Select a course</option>
-                        <option value="Web Development Bootcamp">Web Development Bootcamp</option>
-                        <option value="Digital Marketing Mastery">Digital Marketing Mastery</option>
-                        <option value="Data Science & Analytics">Data Science & Analytics</option>
-                        <option value="Graphic Design Pro">Graphic Design Pro</option>
-                        <option value="Business Analytics">Business Analytics</option>
-                        <option value="Mobile App Development">Mobile App Development</option>
+                        {sortedCourses.map(course => (
+                          <option key={course.id} value={course.name}>
+                            {course.name}
+                          </option>
+                        ))}
                         <option value="Other">Other</option>
                       </select>
                     </div>
                   </div>
 
                   <div>
-                    <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
+                    <label
+                      htmlFor="subject"
+                      className="block text-sm font-medium text-gray-700 mb-2"
+                    >
                       Subject *
                     </label>
                     <input
@@ -212,7 +240,10 @@ const Contact = () => {
                   </div>
 
                   <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                    <label
+                      htmlFor="message"
+                      className="block text-sm font-medium text-gray-700 mb-2"
+                    >
                       Message *
                     </label>
                     <textarea
@@ -241,52 +272,68 @@ const Contact = () => {
               <div className="space-y-6 sm:space-y-8">
                 {/* Contact Details */}
                 <div className="bg-white rounded-xl shadow-lg p-6 sm:p-8">
-                  <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 sm:mb-6">Get in Touch</h2>
+                  <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 sm:mb-6">
+                    Get in Touch
+                  </h2>
 
                   <div className="space-y-4 sm:space-y-6">
                     <div className="flex items-start space-x-3 sm:space-x-4">
                       <MapPinIcon className="h-5 w-5 sm:h-6 sm:w-6 text-primary-600 mt-1 flex-shrink-0" />
                       <div>
-                        <h3 className="font-semibold text-gray-900 mb-1 text-sm sm:text-base">Visit Our Campus</h3>
-                        <p className="text-gray-600 text-sm sm:text-base">{SITE_INFO.address}</p>
+                        <h3 className="font-semibold text-gray-900 mb-1 text-sm sm:text-base">
+                          Visit Our Campus
+                        </h3>
+                        <p className="text-gray-600 text-sm sm:text-base">
+                          {SITE_INFO.address}
+                        </p>
                       </div>
                     </div>
 
                     <div className="flex items-start space-x-3 sm:space-x-4">
                       <PhoneIcon className="h-5 w-5 sm:h-6 sm:w-6 text-primary-600 mt-1 flex-shrink-0" />
                       <div>
-                        <h3 className="font-semibold text-gray-900 mb-1 text-sm sm:text-base">Call Us</h3>
+                        <h3 className="font-semibold text-gray-900 mb-1 text-sm sm:text-base">
+                          Call Us
+                        </h3>
                         <a
                           href={`tel:${SITE_INFO.phone}`}
                           className="text-primary-600 hover:text-primary-700 text-sm sm:text-base"
                         >
                           {SITE_INFO.phone}
                         </a>
-                        <p className="text-xs sm:text-sm text-gray-500">Mon-Sat: 9:00 AM - 6:00 PM</p>
+                        <p className="text-xs sm:text-sm text-gray-500">
+                          Mon-Sat: 7:00 AM - 9:00 PM
+                        </p>
                       </div>
                     </div>
 
                     <div className="flex items-start space-x-3 sm:space-x-4">
                       <EnvelopeIcon className="h-5 w-5 sm:h-6 sm:w-6 text-primary-600 mt-1 flex-shrink-0" />
                       <div>
-                        <h3 className="font-semibold text-gray-900 mb-1 text-sm sm:text-base">Email Us</h3>
+                        <h3 className="font-semibold text-gray-900 mb-1 text-sm sm:text-base">
+                          Email Us
+                        </h3>
                         <a
                           href={`mailto:${SITE_INFO.email}`}
                           className="text-primary-600 hover:text-primary-700 text-sm sm:text-base break-all"
                         >
                           {SITE_INFO.email}
                         </a>
-                        <p className="text-xs sm:text-sm text-gray-500">We'll respond within 24 hours</p>
+                        <p className="text-xs sm:text-sm text-gray-500">
+                          We'll respond within 24 hours
+                        </p>
                       </div>
                     </div>
 
                     <div className="flex items-start space-x-3 sm:space-x-4">
                       <ClockIcon className="h-5 w-5 sm:h-6 sm:w-6 text-primary-600 mt-1 flex-shrink-0" />
                       <div>
-                        <h3 className="font-semibold text-gray-900 mb-1 text-sm sm:text-base">Office Hours</h3>
+                        <h3 className="font-semibold text-gray-900 mb-1 text-sm sm:text-base">
+                          Office Hours
+                        </h3>
                         <div className="text-gray-600 space-y-1 text-xs sm:text-sm">
-                          <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
-                          <p>Saturday: 10:00 AM - 4:00 PM</p>
+                          <p>Morning: 7:00 AM - 12:00 PM</p>
+                          <p>Evening: 3:00 PM - 9:00 PM</p>
                           <p>Sunday: Closed</p>
                         </div>
                       </div>
@@ -296,7 +343,9 @@ const Contact = () => {
 
                 {/* Quick Actions */}
                 <div className="bg-white rounded-xl shadow-lg p-6 sm:p-8">
-                  <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-3 sm:mb-4">Quick Actions</h3>
+                  <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-3 sm:mb-4">
+                    Quick Actions
+                  </h3>
                   <div className="space-y-3">
                     <a
                       href={`https://wa.me/${SITE_INFO.whatsapp}?text=Hi! I'd like to know more about your courses.`}
@@ -325,8 +374,12 @@ const Contact = () => {
         <section className="py-12 sm:py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-6 sm:mb-8">
-              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3 sm:mb-4">Find Us</h2>
-              <p className="text-gray-600 text-sm sm:text-base">Visit our campus and experience our learning environment</p>
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3 sm:mb-4">
+                Find Us
+              </h2>
+              <p className="text-gray-600 text-sm sm:text-base">
+                Visit our campus and experience our learning environment
+              </p>
             </div>
 
             <div className="h-64 sm:h-80 lg:h-96 rounded-xl overflow-hidden shadow-lg">
