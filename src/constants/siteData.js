@@ -248,12 +248,17 @@ export const FOOTER_LINKS = {
   ],
   courses: [
     {
-      name: 'Basic Computer Course',
-      href: '/courses?category=office',
+      name: 'Basic Computer (MS-Office)',
+      href: '/courses/ms-office',
     },
-    { name: 'Tally Prime', href: '/courses?category=tally' },
-    { name: 'Advanced Excel', href: '/courses?category=excel' },
-    { name: 'Graphic Design', href: '/courses?category=design' },
+    { name: 'Tally Prime (GST)', href: '/courses/tally-prime' },
+    {
+      name: 'Advanced Excel (AI)',
+      href: '/courses/advanced-excel',
+    },
+    { name: 'Graphic Designing', href: '/courses/adobe-photoshop' },
+    { name: 'Artificial Intelligence', href: '/courses/learn-ai' },
+    { name: 'Web Development', href: '/courses/web-development' },
   ],
   support: [
     { name: 'Help Center', href: '/help' },
