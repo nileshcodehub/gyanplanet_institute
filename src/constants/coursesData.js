@@ -516,42 +516,76 @@ export const COURSES = [
     logo: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop&crop=center&q=75',
     description:
       'Master advanced Excel functions, data analysis, and integrate AI tools like ChatGPT for enhanced productivity and automation.',
-    duration: '2 months',
+    overview:
+      'Master the most powerful data analysis tool in the corporate world with our Advanced Excel course at Gyanplanet Institute. This program is designed for those who want to move beyond basics and become power users. You will learn complex functions like VLOOKUP, HLOOKUP, Index-Match, and nested IF statements. We dive deep into Data Visualization using advanced PivotTables, Slicers, and dynamic charts. A unique highlight is the integration of AI tools like ChatGPT to write complex VBA macros and debug formulas instantly. Whether you are in finance, marketing, or HR, these skills will automate your workflows and provide unparalleled insights into your data. Join us to become the Excel expert every team needs.',
+    benefits: [
+      'Master complex lookup and logical functions',
+      'Build dynamic and interactive dashboards',
+      'Automate workflows with ChatGPT & VBA',
+      'Perform advanced data analysis and forecasting',
+      'Significant boost in professional productivity',
+    ],
+    whoShouldEnroll:
+      'Data Analysts, Accountants, HR Professionals, and anyone looking to master data management.',
+    duration: '2 Months',
     fee: '₹3,600',
     monthlyFee: '₹1,800',
     features: [
       'Advanced Formulas',
-      'Data Analysis',
+      'Data Visualization',
       'AI Integration',
       'Automation',
     ],
+    syllabus: [
+      {
+        module: 'Advanced Masterclass',
+        topics: [
+          'Nested IFs & Logic',
+          'VLOOKUP/HLOOKUP Mastery',
+          'Index-Match & XLOOKUP',
+          'Array Formulas',
+        ],
+      },
+      {
+        module: 'Data Viz & BI',
+        topics: [
+          'PivotTable Slicers',
+          'Dynamic Charts',
+          'Power Query Basics',
+          'Business Dashboards',
+        ],
+      },
+      {
+        module: 'AI & Automation',
+        topics: [
+          'Formula Generation with AI',
+          'VBA Macro recording',
+          'Debugging with ChatGPT',
+          'Automated Reporting',
+        ],
+      },
+    ],
+    careerOpportunities: [
+      'MIS Executive',
+      'Data Analyst',
+      'Financial Analyst',
+      'HR Ops Specialist',
+      'Business Analyst',
+    ],
+    resources: {
+      free: ['Microsoft Excel Reference', 'Exceljet Blog'],
+      paid: ['Microsoft 365 License', 'Advanced Certification'],
+      online: ['Chandoo.org', 'YouTube Excel Channels'],
+      offline: ['Practice Excel Files'],
+    },
+    installationGuide:
+      '1. Ensure Excel 2019 or later is installed.\n2. Enable Developer tab for VBA.\n3. Access to ChatGPT/Gemini for AI assistance.',
+    alternatives: [
+      { name: 'Google Sheets (Free)', link: 'https://sheets.google.com' },
+      { name: 'WPS Office', link: 'https://www.wps.com/' },
+    ],
     category: ['Technology'],
     searchKeys: ['Excel', 'Advanced Excel', 'Data Analysis', 'AI', 'ChatGPT'],
-  },
-  {
-    id: 8,
-    slug: 'hindi-english-typing',
-    name: 'Hindi & English Typing',
-    logo: 'https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=400&h=300&fit=crop&crop=center&q=75',
-    description:
-      'Improve your typing speed and accuracy in both Hindi and English. Essential skill for data entry and office work.',
-    duration: '4 months',
-    fee: '₹3,200',
-    monthlyFee: '₹800',
-    features: [
-      'Speed Building',
-      'Accuracy Training',
-      'Bilingual Typing',
-      'Practice Tests',
-    ],
-    category: ['Office'],
-    searchKeys: [
-      'Typing',
-      'Hindi Typing',
-      'English Typing',
-      'Data Entry',
-      'Typing Speed',
-    ],
   },
   {
     id: 9,
@@ -889,58 +923,7 @@ export const COURSES = [
       'Automation',
     ],
   },
-  {
-    id: 13,
-    slug: 'advanced-internet',
-    name: 'Advanced Internet',
-    logo: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=100&h=100&fit=crop&crop=center',
-    description:
-      'Master advanced internet technologies, web services, cloud computing, and digital communication tools for modern business.',
-    duration: '1 month',
-    fee: '₹2,500',
-    monthlyFee: '₹2,500',
-    features: [
-      'Web Technologies',
-      'Cloud Services',
-      'Digital Communication',
-      'Online Security',
-    ],
-    category: ['Technology'],
-    searchKeys: [
-      'Technology',
-      'Internet',
-      'Email',
-      'Browser',
-      'Net Banking',
-      'Cyber Security',
-    ],
-  },
-  {
-    id: 14,
-    slug: 'video-editing',
-    name: 'Video Editing',
-    logo: 'https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=100&h=100&fit=crop&crop=center',
-    description:
-      'Learn professional video editing techniques using industry-standard software. Create engaging content for social media and marketing.',
-    duration: '1 month',
-    fee: '₹2,500',
-    monthlyFee: '₹2,500',
-    features: [
-      'Video Editing',
-      'Color Grading',
-      'Audio Editing',
-      'Motion Graphics',
-    ],
-    category: ['Media'],
-    searchKeys: [
-      'Media',
-      'Video Editing',
-      'Premiere Pro',
-      'After Effects',
-      'YouTube',
-      'Content Creation',
-    ],
-  },
+
   {
     id: 15,
     slug: 'data-analytics',
@@ -1449,42 +1432,154 @@ export const COURSES = [
     id: 18,
     slug: 'revit',
     name: 'Revit',
-    logo: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=100&h=100&fit=crop&crop=center',
+    logo: 'https://images.unsplash.com/photo-1503387762-592dea58ef21?w=400&h=300&fit=crop&crop=center&q=75',
     description:
-      'Learn Building Information Modeling (BIM) with Autodesk Revit. Design and document building projects with precision.',
-    duration: '2 months',
-    fee: '₹10,000',
-    monthlyFee: '₹5,000',
-    features: [
-      'BIM Modeling',
-      'Architectural Design',
-      'MEP Systems',
-      'Project Documentation',
+      'Learn Building Information Modeling (BIM) with Autodesk Revit. Design buildings with intelligence and precision.',
+    overview:
+      'Step into the future of architectural design with our Autodesk Revit course at Gyanplanet Institute. Revit is the industry-leading software for Building Information Modeling (BIM), allowing you to design buildings with intelligent objects rather than just lines. This course covers the entire design process, from initial conceptualization to detailed documentation and scheduling. You will learn to create floor plans, elevations, sections, and 3D views that update automatically when changes are made. We focus on architectural modeling, family creation, and rendering high-quality visualizations. By mastering Revit, you will be prepared for modern AEC (Architecture, Engineering, and Construction) industry workflows and significantly enhance your professional value.',
+    benefits: [
+      'Master BIM-based architectural design',
+      'Create smart 3D building models',
+      'Automatic generation of plans and sections',
+      'Learn high-quality architectural rendering',
+      'Pathway to global AEC firms',
+    ],
+    whoShouldEnroll:
+      'Architects, Civil Engineers, Interior Designers, and BIM aspirants.',
+    duration: '2 Months',
+    fee: '₹8,500',
+    features: ['BIM Design', 'Architecture', '3D Visualization', 'Scheduling'],
+    syllabus: [
+      {
+        module: 'Revit Foundations',
+        topics: [
+          'BIM Concepts',
+          'User Interface',
+          'Basic Walls & Floors',
+          'Levels & Grids',
+        ],
+      },
+      {
+        module: 'Design & Detailing',
+        topics: [
+          'Roofs & Ceilings',
+          'Stairs & Railings',
+          'Family Creation Basics',
+          'Annotations',
+        ],
+      },
+      {
+        module: 'Output & Rendering',
+        topics: [
+          'Sheet Layouts',
+          'Photorealistic Rendering',
+          'Walkthroughs',
+          'Clash Detection',
+        ],
+      },
+    ],
+    careerOpportunities: [
+      'BIM Modeler',
+      'Architectural Designer',
+      'Revit Professional',
+      'Project Coordinator',
+      'VDC Specialist',
+    ],
+    resources: {
+      free: ['Autodesk Learning Portal', 'RevitCity Content'],
+      paid: ['Revit License', 'Enscape for Revit'],
+      online: ['Lynda.com Courses', 'BIMsmith Forge'],
+      offline: ['Architectural Standards Guide'],
+    },
+    installationGuide:
+      '1. Register for an Autodesk Student account.\n2. Download Revit installer from the Autodesk site.\n3. Install and activate via the provided key.',
+    alternatives: [
+      { name: 'ArchiCAD', link: 'https://graphisoft.com/solutions/archicad' },
+      { name: 'SketchUp', link: 'https://www.sketchup.com/' },
     ],
     category: ['Architecture'],
     searchKeys: [
       'Architecture',
-      'Revit',
+      'Engineering',
+      'Civil',
       'BIM',
-      '3D Modeling',
-      'Building Design',
+      'Designing',
+      'Revit',
     ],
   },
   {
     id: 19,
     slug: 'nx-cad',
     name: 'NX-CAD',
-    logo: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=100&h=100&fit=crop&crop=center',
+    logo: 'https://images.unsplash.com/photo-1537462715879-360eeb61a0ad?w=400&h=300&fit=crop&crop=center&q=75',
     description:
-      'Master advanced CAD design with Siemens NX. Professional 3D modeling and simulation for engineering applications.',
-    duration: '2 months',
-    fee: '₹10,000',
-    monthlyFee: '₹5,000',
+      'Master high-end engineering design with Siemens NX. Professional 3D modeling and simulation for engineering applications.',
+    overview:
+      "Master high-end engineering design with our Siemens NX-CAD course at Gyanplanet Institute. Siemens NX is one of the world's most advanced product development systems, used extensively in the automotive and aerospace industries. This course provides comprehensive training in 3D solid modeling, advanced surfacing, and assembly design. You will learn to use synchronous technology for fast and flexible design changes, alongside classical history-based modeling. We also cover drafting standards and basic simulation to verify your designs. Whether you are an aspiring mechanical engineer or a design professional, this course gives you the technical expertise to handle complex product designs and thrive in a high-tech manufacturing environment.",
+    benefits: [
+      'Expertise in world-class PLM software',
+      'Advanced 3D surface and solid modeling',
+      'Learn synchronous design technology',
+      'Professional engineering drafting skills',
+      'Essential for Automotive/Aerospace careers',
+    ],
+    whoShouldEnroll:
+      'Mechanical Engineers, Product Designers, and CAD professionals.',
+    duration: '2 Months',
+    fee: '₹10,500',
     features: [
       '3D Modeling',
       'Simulation',
       'Engineering Design',
       'Manufacturing',
+    ],
+    syllabus: [
+      {
+        module: 'NX Fundamentals',
+        topics: [
+          'Interface & Sketching',
+          'Solid Modeling Basics',
+          'Feature Operations',
+          'Synchronous Tech',
+        ],
+      },
+      {
+        module: 'Advanced Assemblies',
+        topics: [
+          'Top-Down Assembly',
+          'Assembly Constraints',
+          'Surface Modeling',
+          'Sheet Metal Design',
+        ],
+      },
+      {
+        module: 'Simulation & Drafting',
+        topics: [
+          'Drafting Standards',
+          'BOM Generation',
+          'Motion Simulation Intro',
+          'Rendering',
+        ],
+      },
+    ],
+    careerOpportunities: [
+      'NX Designer',
+      'Mechanical Engineer',
+      'Automotive Designer',
+      'Product Developer',
+      'Design Engineer',
+    ],
+    resources: {
+      free: ['Siemens Community Support', 'GrabCAD Models'],
+      paid: ['Siemens NX License', 'Advanced CAM Training'],
+      online: ['YouTube NX Tutorials', 'Eng-Tips Forums'],
+      offline: ['Mechanical Part Blueprints'],
+    },
+    installationGuide:
+      '1. Ensure your system has a certified workstation GPU.\n2. Install Siemens PLM setup.\n3. Configure the license server to activate.',
+    alternatives: [
+      { name: 'SolidWorks', link: 'https://www.solidworks.com/' },
+      { name: 'CATIA', link: 'https://www.3ds.com/products-services/catia/' },
     ],
     category: ['Engineering'],
     searchKeys: [

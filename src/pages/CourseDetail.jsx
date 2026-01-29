@@ -367,19 +367,7 @@ const CourseDetail = () => {
                   center.
                 </p>
                 <div className="mt-6 flex items-center justify-center space-x-4 border-t border-gray-100 pt-6">
-                  <div className="flex -space-x-2">
-                    {[1, 2, 3].map(i => (
-                      <div
-                        key={i}
-                        className="w-8 h-8 rounded-full border-2 border-white bg-gray-200 overflow-hidden"
-                      >
-                        <img
-                          src={`https://i.pravatar.cc/100?u=${i}`}
-                          alt="Student"
-                        />
-                      </div>
-                    ))}
-                  </div>
+                  <div className="flex -space-x-2"></div>
                   <span className="text-sm font-medium text-gray-600">
                     5k+ Enrolled
                   </span>
