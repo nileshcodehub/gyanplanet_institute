@@ -2,7 +2,7 @@ import { useMemo, useState } from 'react';
 import { MagnifyingGlassIcon } from '@heroicons/react/24/outline';
 import SEO from '../components/SEO';
 import CourseCard from '../components/CourseCard';
-import { COURSES } from '../constants/siteData';
+import { COURSES } from '../constants/coursesData';
 
 const Courses = () => {
   const [searchTerm, setSearchTerm] = useState('');

@@ -9,7 +9,8 @@ import {
   ExclamationCircleIcon,
 } from '@heroicons/react/24/outline';
 import SEO from '../components/SEO';
-import { SITE_INFO, COURSES } from '../constants/siteData';
+import { SITE_INFO } from '../constants/siteData';
+import { COURSES } from '../constants/coursesData';
 
 const serviceId = process.env.REACT_APP_EMAILJS_SERVICE_ID;
 const templateId = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
