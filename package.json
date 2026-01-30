@@ -2,7 +2,7 @@
   "name": "gyanplanet_institute",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://Nileshunique.github.io/gyanplanet_institute",
+  "homepage": "https://nileshcodehub.github.io/gyanplanet_institute",
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
     "@heroicons/react": "^2.1.5",
