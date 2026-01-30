@@ -3,7 +3,7 @@ export const COURSES = [
     id: 1,
     slug: 'ms-office',
     name: 'MS-Office',
-    logo: 'https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=400&h=300&fit=crop&crop=center&q=75',
+    logo: '/assets/images/course/logo/01_ms_office.webp',
     description:
       'Master Microsoft Office Suite including Word, Excel, PowerPoint, and Outlook. Essential skills for any professional environment.',
     overview:
@@ -91,7 +91,7 @@ export const COURSES = [
     id: 2,
     slug: 'tally-prime',
     name: 'Tally Prime (GST) with Accounting',
-    logo: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=400&h=300&fit=crop&crop=center&q=75',
+    logo: '/assets/images/course/logo/02_tally_prime.webp',
     description:
       'Learn complete accounting with Tally Prime including GST compliance, inventory management, and financial reporting.',
     overview:
@@ -181,7 +181,7 @@ export const COURSES = [
     id: 3,
     slug: 'adobe-photoshop',
     name: 'Adobe Photoshop',
-    logo: 'https://images.unsplash.com/photo-1572044162444-ad60f128bdea?w=400&h=300&fit=crop&crop=center&q=75',
+    logo: '/assets/images/course/logo/03_adobe_photoshop.webp',
     description:
       'Master photo editing, digital art, and graphic design with Adobe Photoshop. Create stunning visuals and manipulate images professionally.',
     overview:
@@ -264,7 +264,7 @@ export const COURSES = [
     id: 4,
     slug: 'adobe-coreldraw',
     name: 'Adobe CorelDraw',
-    logo: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?w=400&h=300&fit=crop&crop=center&q=75',
+    logo: '/assets/images/course/logo/04_adobe_coreldraw.webp',
     description:
       'Learn vector graphics design with CorelDraw. Create logos, illustrations, and professional graphics for print and digital media.',
     overview:
@@ -347,7 +347,7 @@ export const COURSES = [
     id: 5,
     slug: 'adobe-illustrator',
     name: 'Adobe Illustrator',
-    logo: 'https://images.unsplash.com/photo-1609921212029-bb5a28e60960?w=400&h=300&fit=crop&crop=center&q=75',
+    logo: '/assets/images/course/logo/05_adobe_illustrator.webp',
     description:
       'Master vector illustration and graphic design with Adobe Illustrator. Create scalable graphics, logos, and artwork.',
     overview:
@@ -430,7 +430,7 @@ export const COURSES = [
     id: 6,
     slug: 'adobe-indesign',
     name: 'Adobe InDesign',
-    logo: 'https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=400&h=300&fit=crop&crop=center&q=75',
+    logo: '/assets/images/course/logo/06_adobe_in_design.webp',
     description:
       'Learn professional page layout and desktop publishing with Adobe InDesign. Design magazines, brochures, and books.',
     overview:
@@ -513,7 +513,7 @@ export const COURSES = [
     id: 7,
     slug: 'advanced-excel',
     name: 'Advanced Excel with AI & ChatGPT',
-    logo: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop&crop=center&q=75',
+    logo: '/assets/images/course/logo/07_advance_excel.webp',
     description:
       'Master advanced Excel functions, data analysis, and integrate AI tools like ChatGPT for enhanced productivity and automation.',
     overview:
@@ -591,7 +591,7 @@ export const COURSES = [
     id: 9,
     slug: 'autocad-2d-3d',
     name: 'AutoCAD 2D & 3D',
-    logo: 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=400&h=300&fit=crop&crop=center&q=75',
+    logo: '/assets/images/course/logo/09_autocad_2d_3d.webp',
     description:
       'Master professional computer-aided design with AutoCAD. Learn to create precise 2D drafts and 3D models for engineering and architecture.',
     overview:
@@ -671,7 +671,7 @@ export const COURSES = [
     id: 10,
     slug: 'c-cpp-programming',
     name: 'C & C++ Programming',
-    logo: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=300&fit=crop&crop=center&q=75',
+    logo: '/assets/images/course/logo/10_c_and_c++.webp',
     description:
       'Build a strong foundation in programming with C and C++. Learn logic, data structures, and object-oriented programming.',
     overview:
@@ -755,7 +755,7 @@ export const COURSES = [
     id: 11,
     slug: 'java-programming',
     name: 'Java Programming',
-    logo: 'https://images.unsplash.com/photo-1542831371-29b0f74f9713?w=400&h=300&fit=crop&crop=center&q=75',
+    logo: '/assets/images/course/logo/11_java_programming.webp',
     description:
       'Master Java programming for enterprise and mobile applications. Learn core and advanced Java concepts.',
     overview:
@@ -841,7 +841,7 @@ export const COURSES = [
     id: 12,
     slug: 'python-programming',
     name: 'Python Programming',
-    logo: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=400&h=300&fit=crop&crop=center&q=75',
+    logo: '/assets/images/course/logo/12_python_programming.webp',
     description:
       'Learn Python, the most versatile language for web dev, data science, and automation. Master its simple but powerful syntax.',
     overview:
@@ -928,7 +928,7 @@ export const COURSES = [
     id: 15,
     slug: 'data-analytics',
     name: 'Data Analytics',
-    logo: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300&fit=crop&crop=center&q=75',
+    logo: '/assets/images/course/logo/15_data_analytics.webp',
     description:
       'Turn data into insights. Learn data visualization, statistical analysis, and business intelligence tools.',
     overview:
@@ -1006,7 +1006,7 @@ export const COURSES = [
     id: 16,
     slug: 'sap-course',
     name: 'SAP Course',
-    logo: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300&fit=crop&crop=center&q=75',
+    logo: '/assets/images/course/logo/sap.webp',
     description:
       'Master enterprise resource planning with SAP. Learn modules like FICO, MM, or SD for corporate careers.',
     overview:
@@ -1093,7 +1093,7 @@ export const COURSES = [
     id: 17,
     slug: 'web-development',
     name: 'Web Development',
-    logo: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400&h=300&fit=crop&crop=center&q=75',
+    logo: '/assets/images/course/logo/web development.webp',
     description:
       'Learn to build modern, responsive websites with HTML, CSS, JavaScript, and advanced frameworks.',
     overview:
@@ -1177,7 +1177,7 @@ export const COURSES = [
     id: 8,
     slug: 'hindi-english-typing',
     name: 'Hindi & English Typing',
-    logo: 'https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?w=400&h=300&fit=crop&crop=center&q=75',
+    logo: '/assets/images/course/logo/08_english_typing.webp',
     description:
       'Master professional typing in both Hindi and English. Achieve high speed and accuracy for government and private sector jobs.',
     overview:
@@ -1263,7 +1263,7 @@ export const COURSES = [
     id: 13,
     slug: 'advanced-internet',
     name: 'Advanced Internet',
-    logo: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=400&h=300&fit=crop&crop=center&q=75',
+    logo: '/assets/images/course/logo/13_advance_internet.webp',
     description:
       'Go beyond basic browsing. Learn advanced search techniques, cybersecurity, online tools, and digital literacy for the modern world.',
     overview:
@@ -1346,7 +1346,7 @@ export const COURSES = [
     id: 14,
     slug: 'video-editing',
     name: 'Video Editing',
-    logo: 'https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=400&h=300&fit=crop&crop=center&q=75',
+    logo: '/assets/images/course/logo/14_video_editing.webp',
     description:
       'Learn to tell compelling stories through video. Master Premiere Pro and mobile editing tools for YouTube, social media, and more.',
     overview:
@@ -1432,7 +1432,7 @@ export const COURSES = [
     id: 18,
     slug: 'revit',
     name: 'Revit',
-    logo: 'https://images.unsplash.com/photo-1503387762-592dea58ef21?w=400&h=300&fit=crop&crop=center&q=75',
+    logo: '/assets/images/course/logo/18_revit.webp',
     description:
       'Learn Building Information Modeling (BIM) with Autodesk Revit. Design buildings with intelligence and precision.',
     overview:
@@ -1511,7 +1511,7 @@ export const COURSES = [
     id: 19,
     slug: 'nx-cad',
     name: 'NX-CAD',
-    logo: 'https://images.unsplash.com/photo-1537462715879-360eeb61a0ad?w=400&h=300&fit=crop&crop=center&q=75',
+    logo: '/assets/images/course/logo/19_nx_cad.webp',
     description:
       'Master high-end engineering design with Siemens NX. Professional 3D modeling and simulation for engineering applications.',
     overview:
@@ -1594,7 +1594,7 @@ export const COURSES = [
     id: 20,
     slug: 'stenography-course',
     name: 'Stenography Course',
-    logo: 'https://images.unsplash.com/photo-1455390582262-044cdead277a?w=400&h=300&fit=crop&crop=center&q=75',
+    logo: '/assets/images/course/logo/20_stenography.webp',
     description:
       'Learn the art of shorthand writing. Essential for court reporters, personal assistants, and government stenographer roles.',
     overview:
@@ -1673,7 +1673,7 @@ export const COURSES = [
     id: 21,
     slug: 'spoken-english',
     name: 'Spoken English',
-    logo: 'https://images.unsplash.com/photo-1543167664-400296996446?w=400&h=300&fit=crop&crop=center&q=75',
+    logo: '/assets/images/course/logo/21_spoken_english.webp',
     description:
       'Boost your confidence and communication skills. Learn fluent English, public speaking, and personality development.',
     overview:
@@ -1756,7 +1756,7 @@ export const COURSES = [
     id: 22,
     slug: 'computer-hardware',
     name: 'Computer Hardware',
-    logo: 'https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?w=400&h=300&fit=crop&crop=center&q=75',
+    logo: '/assets/images/course/logo/22_computer_hardware.webp',
     description:
       'Learn to assemble, repair, and maintain computers. Master hardware troubleshooting, networking basics, and OS installation.',
     overview:
