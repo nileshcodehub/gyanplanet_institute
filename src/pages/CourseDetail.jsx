@@ -138,9 +138,13 @@ const CourseDetail = () => {
             <div className="hidden lg:block relative">
               <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl border-4 border-white/10 transform rotate-2 hover:rotate-0 transition-transform duration-500">
                 <LazyImage
-                  src={`${course.logo}&w=800&h=600&fit=crop`}
+                  src={
+                    course.logo.startsWith('http')
+                      ? `${course.logo}&w=600&h=600&fit=crop`
+                      : course.logo
+                  }
                   alt={course.name}
-                  className="w-full h-[400px] object-cover"
+                  className="w-full aspect-square object-contain bg-white/5"
                 />
               </div>
             </div>
@@ -390,9 +394,13 @@ const CourseDetail = () => {
                       <div className="flex items-center space-x-4">
                         <div className="flex-shrink-0 w-16 h-16 rounded-lg overflow-hidden border border-gray-100 group-hover:border-primary-200 transition-colors duration-200">
                           <LazyImage
-                            src={`${relCourse.logo}&w=100&h=100&fit=crop`}
+                            src={
+                              relCourse.logo.startsWith('http')
+                                ? `${relCourse.logo}&w=100&h=100&fit=crop`
+                                : relCourse.logo
+                            }
                             alt={relCourse.name}
-                            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                            className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-300 p-2"
                           />
                         </div>
                         <div>

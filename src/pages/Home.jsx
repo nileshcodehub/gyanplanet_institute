@@ -135,7 +135,11 @@ const Home = () => {
                 className="bg-white rounded-xl shadow-lg overflow-hidden card-hover"
               >
                 <LazyImage
-                  src={`${course.logo}&w=400&h=300&fit=crop`}
+                  src={
+                    course.logo.startsWith('http')
+                      ? `${course.logo}&w=400&h=300&fit=crop`
+                      : course.logo
+                  }
                   alt={course.name}
                   className="w-full h-40 sm:h-48 object-cover"
                   placeholder="📚"
