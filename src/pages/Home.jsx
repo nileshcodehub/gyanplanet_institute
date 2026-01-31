@@ -26,8 +26,7 @@ const Home = () => {
   useEffect(() => {
     const img = new Image();
     img.onload = () => setHeroImageLoaded(true);
-    img.src =
-      'https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=75';
+    img.src = `${import.meta.env.BASE_URL}assets/images/hero_banner.webp`;
   }, []);
 
   return (
@@ -40,7 +39,16 @@ const Home = () => {
 
       {/* Hero Section */}
       <section
-        className={`${heroImageLoaded ? 'hero-bg' : 'hero-bg-preload'} min-h-screen flex items-center transition-all duration-500`}
+        className={`relative py-12 sm:py-20 flex items-center justify-center text-white overflow-hidden transition-all duration-700 ${
+          heroImageLoaded ? 'hero-bg' : 'hero-bg-preload'
+        }`}
+        style={
+          heroImageLoaded
+            ? {
+                backgroundImage: `linear-gradient(135deg, oklch(60% 0.2 245 / 90%), oklch(55% 0.22 250 / 80%)), url(${import.meta.env.BASE_URL}assets/images/hero_banner.webp)`,
+              }
+            : {}
+        }
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
           <div className="text-center text-white">
@@ -57,12 +65,13 @@ const Home = () => {
               >
                 {HERO_CONTENT.ctaText}
               </Link>
-              <Link
-                to="/books"
-                className="glass-effect hover:bg-white hover:bg-opacity-20 font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-lg text-base sm:text-lg transition-all duration-200 w-full sm:w-auto"
+              <a
+                href={`${import.meta.env.BASE_URL}assets/pdf/prospectus.pdf`}
+                download
+                className="glass-effect hover:bg-white hover:bg-opacity-20 font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-lg text-base sm:text-lg transition-all duration-200 w-full sm:w-auto text-center"
               >
-                {HERO_CONTENT.secondaryCtaText}
-              </Link>
+                Download Prospectus
+              </a>
             </div>
           </div>
         </div>
@@ -138,7 +147,7 @@ const Home = () => {
                   src={
                     course.logo.startsWith('http')
                       ? `${course.logo}&w=400&h=300&fit=crop`
-                      : course.logo
+                      : `${import.meta.env.BASE_URL}${course.logo.startsWith('/') ? course.logo.slice(1) : course.logo}`
                   }
                   alt={course.name}
                   className="w-full h-40 sm:h-48 object-cover"
@@ -152,14 +161,20 @@ const Home = () => {
                   <p className="text-gray-600 mb-4 line-clamp-2 text-sm sm:text-base">
                     {course.description}
                   </p>
-                  <div className="flex justify-between items-center">
+                  <div className="flex justify-between items-center mb-4">
                     <span className="text-xl sm:text-2xl font-bold text-primary-600">
-                      {course.monthlyFee || course.fee}
+                      {course.fee}
                     </span>
                     <span className="text-xs sm:text-sm text-gray-500">
                       {course.duration}
                     </span>
                   </div>
+                  <Link
+                    to={`/courses/${course.slug}`}
+                    className="block w-full text-center bg-primary-600 text-white font-bold py-2 rounded-lg hover:bg-primary-700 transition-colors duration-200"
+                  >
+                    View Details
+                  </Link>
                 </div>
               </div>
             ))}

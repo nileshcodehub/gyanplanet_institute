@@ -89,13 +89,6 @@ code {
   }
 
   .hero-bg {
-    background:
-      linear-gradient(
-        135deg,
-        oklch(60% 0.2 245 / 90%),
-        oklch(55% 0.22 250 / 80%)
-      ),
-      url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=75');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
