@@ -32,8 +32,7 @@ export const BOOKS = [
     id: 1,
     title:
       'A Complete Book of Tally Prime 5.0 for Students & Coaching Institute',
-    image:
-      'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=300&h=400&fit=crop',
+    image: '/assets/images/books/tally_prime_5.webp',
     description:
       'Comprehensive guide to Tally Prime 5.0 covering all features, GST compliance, inventory management, and accounting principles for students and coaching institutes.',
     price: '₹299',
@@ -59,8 +58,7 @@ export const BOOKS = [
     id: 2,
     title:
       'A Complete Book of Tally Prime 4.0 for Students & Coaching Institute',
-    image:
-      'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=300&h=400&fit=crop',
+    image: '/assets/images/books/tally_prime_4.0.webp',
     description:
       'Complete reference guide for Tally Prime 4.0 with practical examples, exercises, and real-world scenarios for effective learning.',
     price: '₹249',
@@ -86,8 +84,7 @@ export const BOOKS = [
     id: 3,
     title:
       '150+ EXCEL FORMULA AND FUNCTION .XLSX FILE WITH USAGE AND EXAMPLES STEP BY STEP GUIDE',
-    image:
-      'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=300&h=400&fit=crop',
+    image: '/assets/images/books/excel.webp',
     description:
       'Comprehensive Excel formula collection with 150+ formulas and functions. Includes practical examples, step-by-step guides, and downloadable .xlsx files.',
     price: '₹199',
@@ -112,8 +109,7 @@ export const BOOKS = [
     id: 4,
     title:
       'Course On Computer Concepts(CCC) in Hindi - Based On Nielit Doeacc Latest Syllabus',
-    image:
-      'https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=300&h=400&fit=crop',
+    image: '/assets/images/books/bcc.webp',
     description:
       'Complete CCC course material in Hindi based on the latest NIELIT DOEACC syllabus. Covers all computer concepts, internet, and digital literacy topics.',
     price: '₹149',
@@ -136,8 +132,7 @@ export const BOOKS = [
   {
     id: 5,
     title: 'COMPLETE PHOTOSHOP 7.0 TUTORIAL IN HINDI',
-    image:
-      'https://images.unsplash.com/photo-1572044162444-ad60f128bdea?w=300&h=400&fit=crop',
+    image: '/assets/images/books/photoshop.webp',
     description:
       'Step-by-step Photoshop 7.0 tutorial in Hindi covering all tools, techniques, and advanced features for photo editing and graphic design.',
     price: '₹179',
@@ -161,8 +156,7 @@ export const BOOKS = [
   {
     id: 6,
     title: 'COMPLETE CORELDRAW X3 TUTORIAL IN HINDI',
-    image:
-      'https://images.unsplash.com/photo-1561070791-2526d30994b5?w=300&h=400&fit=crop',
+    image: '/assets/images/books/corel.webp',
     description:
       'Comprehensive CorelDraw X3 tutorial in Hindi with practical exercises, design projects, and professional techniques for vector graphics.',
     price: '₹179',
@@ -188,8 +182,7 @@ export const BOOKS = [
     id: 7,
     title:
       'SUPERFAST ENGLISH TYPING TUTORIAL IN HINDI STEP BY STEP MANUAL GUIDE',
-    image:
-      'https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=300&h=400&fit=crop',
+    image: '/assets/images/books/typing.webp',
     description:
       'Complete English typing tutorial in Hindi with step-by-step manual guide to achieve superfast typing speed and accuracy.',
     price: '₹99',

@@ -1093,7 +1093,7 @@ export const COURSES = [
     id: 17,
     slug: 'web-development',
     name: 'Web Development',
-    logo: '/assets/images/course/logo/web development.webp',
+    logo: '/assets/images/course/logo/web_development.webp',
     description:
       'Learn to build modern, responsive websites with HTML, CSS, JavaScript, and advanced frameworks.',
     overview:

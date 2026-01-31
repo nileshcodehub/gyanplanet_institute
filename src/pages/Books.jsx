@@ -73,7 +73,7 @@ const Books = () => {
 
       <div className="min-h-screen bg-gray-50">
         {/* Header Section */}
-        <section className="bg-secondary-600 text-white py-12 sm:py-16">
+        <section className="bg-primary-600 text-white py-12 sm:py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <BookOpenIcon className="h-12 w-12 sm:h-16 sm:w-16 mx-auto mb-4 opacity-80" />
@@ -143,7 +143,7 @@ const Books = () => {
         <section className="py-8 sm:py-12">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             {filteredAndSortedBooks.length > 0 ? (
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 max-w-6xl mx-auto">
                 {filteredAndSortedBooks.map(book => (
                   <BookCard key={book.id} book={book} />
                 ))}
@@ -175,50 +175,6 @@ const Books = () => {
           </div>
         </section>
 
-        {/* Featured Authors Section */}
-        <section className="py-12 sm:py-16 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-8 sm:mb-12">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
-                Our Expert Authors
-              </h2>
-              <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto px-4">
-                Learn from industry professionals and experienced educators who
-                bring real-world knowledge to every page.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
-              {[...new Set(BOOKS.map(book => book.author))]
-                .slice(0, 4)
-                .map(author => {
-                  const authorBooks = BOOKS.filter(
-                    book => book.author === author
-                  );
-
-                  return (
-                    <div key={author} className="text-center">
-                      <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-secondary-400 to-secondary-600 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
-                        <span className="text-white font-bold text-lg sm:text-2xl">
-                          {author
-                            .split(' ')
-                            .map(n => n[0])
-                            .join('')}
-                        </span>
-                      </div>
-                      <h3 className="font-semibold text-gray-900 mb-1 text-sm sm:text-base">
-                        {author}
-                      </h3>
-                      <p className="text-xs sm:text-sm text-gray-600 mb-2">
-                        {authorBooks.length} Books
-                      </p>
-                    </div>
-                  );
-                })}
-            </div>
-          </div>
-        </section>
-
         {/* CTA Section */}
         <section className="py-12 sm:py-16 bg-secondary-600 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -229,17 +185,6 @@ const Books = () => {
               Download our books instantly and access expert knowledge anytime,
               anywhere. Perfect for self-paced learning and reference.
             </p>
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-4">
-              <button className="bg-white text-secondary-600 hover:bg-gray-100 font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-lg text-base sm:text-lg transition-colors duration-200 w-full sm:w-auto">
-                Browse All Books
-              </button>
-              <a
-                href="mailto:info@gyanplanetinstitute.com?subject=Book Inquiry"
-                className="border-2 border-white hover:bg-white hover:text-secondary-600 font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-lg text-base sm:text-lg transition-colors duration-200 w-full sm:w-auto"
-              >
-                Contact for Bulk Orders
-              </a>
-            </div>
           </div>
         </section>
       </div>
