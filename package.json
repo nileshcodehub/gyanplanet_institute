@@ -2,7 +2,7 @@
   "name": "gyanplanet_institute",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://nileshcodehub.github.io/gyanplanet_institute",
+  "homepage": "https://gyanplanetinstitute.com/",
   "type": "module",
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
