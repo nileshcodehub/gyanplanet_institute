@@ -8,6 +8,7 @@ import Books from './pages/Books';
 import Contact from './pages/Contact';
 import CourseDetail from './pages/CourseDetail';
 import Lectures from './pages/Lectures';
+import PageNotFound from './pages/PageNotFound';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import './App.css';
 
@@ -31,6 +32,7 @@ function App() {
                 path="/lectures/:playlistId/:videoId"
                 element={<Lectures />}
               />
+              <Route path="/*" element={<PageNotFound />} />
             </Routes>
           </main>
           <Footer />
