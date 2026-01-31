@@ -8,6 +8,7 @@ import Books from './pages/Books';
 import Contact from './pages/Contact';
 import CourseDetail from './pages/CourseDetail';
 import Lectures from './pages/Lectures';
+import AboutUs from './pages/AboutUs';
 import PageNotFound from './pages/PageNotFound';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import './App.css';
@@ -23,15 +24,16 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/courses" element={<Courses />} />
-              <Route path="/books" element={<Books />} />
-              <Route path="/contact" element={<Contact />} />
               <Route path="/courses/:slug" element={<CourseDetail />} />
+              <Route path="/books" element={<Books />} />
               <Route path="/lectures" element={<Lectures />} />
               <Route path="/lectures/:playlistId" element={<Lectures />} />
               <Route
                 path="/lectures/:playlistId/:videoId"
                 element={<Lectures />}
               />
+              <Route path="/about" element={<AboutUs />} />
+              <Route path="/contact" element={<Contact />} />
               <Route path="/*" element={<PageNotFound />} />
             </Routes>
           </main>

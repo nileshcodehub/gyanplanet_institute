@@ -208,6 +208,7 @@ export const NAVIGATION = [
   { name: 'Books', href: '/books' },
   { name: 'Lectures', href: '/lectures' },
   { name: 'Contact', href: '/contact' },
+  { name: 'About Us', href: '/about' },
 ];
 
 // Site statistics
@@ -238,6 +239,7 @@ export const FOOTER_LINKS = {
     { name: 'Books', href: '/books' },
     { name: 'Lectures', href: '/lectures' },
     { name: 'Contact', href: '/contact' },
+    { name: 'About Us', href: '/about' },
   ],
   courses: [
     {
