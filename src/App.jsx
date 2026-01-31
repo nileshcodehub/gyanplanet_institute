@@ -25,10 +25,10 @@ function App() {
               <Route path="/books" element={<Books />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/courses/:slug" element={<CourseDetail />} />
-              <Route path="/lecture" element={<Lectures />} />
-              <Route path="/lecture/:playlistId" element={<Lectures />} />
+              <Route path="/lectures" element={<Lectures />} />
+              <Route path="/lectures/:playlistId" element={<Lectures />} />
               <Route
-                path="/lecture/:playlistId/:videoId"
+                path="/lectures/:playlistId/:videoId"
                 element={<Lectures />}
               />
             </Routes>

@@ -39,7 +39,7 @@ const Lectures = () => {
   };
 
   const handleVideoSelect = (pId, vId) => {
-    navigate(`/lecture/${pId}/${vId}`);
+    navigate(`/lectures/${pId}/${vId}`);
     // On mobile/small screens, close sidebar after selection
     if (window.innerWidth < 1024) {
       setIsSidebarOpen(false);
@@ -51,7 +51,7 @@ const Lectures = () => {
     e.stopPropagation();
     togglePlaylist(pId);
     // If we want clicking the header to also navigate to the playlist view:
-    navigate(`/lecture/${pId}`);
+    navigate(`/lectures/${pId}`);
   };
 
   return (
@@ -197,7 +197,7 @@ const Lectures = () => {
                       key={playlist.playlistId}
                       onClick={() => {
                         togglePlaylist(playlist.playlistId);
-                        navigate(`/lecture/${playlist.playlistId}`);
+                        navigate(`/lectures/${playlist.playlistId}`);
                       }}
                       className="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow cursor-pointer overflow-hidden border border-gray-100 group"
                     >
@@ -293,7 +293,7 @@ const Lectures = () => {
               <div className="space-y-6">
                 <div className="aspect-video w-full bg-black rounded-xl overflow-hidden shadow-lg">
                   <iframe
-                    src={`https://www.youtube.com/embed/${videoId}?autoplay=1`}
+                    src={`https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`}
                     title={currentVideo?.title}
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
