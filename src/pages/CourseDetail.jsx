@@ -141,7 +141,7 @@ const CourseDetail = () => {
                   src={
                     course.logo.startsWith('http')
                       ? `${course.logo}&w=600&h=600&fit=crop`
-                      : course.logo
+                      : `${import.meta.env.BASE_URL}${course.logo.startsWith('/') ? course.logo.slice(1) : course.logo}`
                   }
                   alt={course.name}
                   className="w-full aspect-square object-contain bg-white/5"
@@ -397,7 +397,7 @@ const CourseDetail = () => {
                             src={
                               relCourse.logo.startsWith('http')
                                 ? `${relCourse.logo}&w=100&h=100&fit=crop`
-                                : relCourse.logo
+                                : `${import.meta.env.BASE_URL}${relCourse.logo.startsWith('/') ? relCourse.logo.slice(1) : relCourse.logo}`
                             }
                             alt={relCourse.name}
                             className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-300 p-2"

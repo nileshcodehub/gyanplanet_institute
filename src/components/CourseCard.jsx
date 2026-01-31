@@ -24,7 +24,11 @@ const CourseCard = ({ course }) => {
         {/* Course Logo and Header */}
         <div className="flex items-center space-x-4 mb-4">
           <LazyImage
-            src={course.logo}
+            src={
+              course.logo.startsWith('http')
+                ? course.logo
+                : `${import.meta.env.BASE_URL}${course.logo.startsWith('/') ? course.logo.slice(1) : course.logo}`
+            }
             alt={course.name}
             className="w-16 h-16 rounded-lg object-cover"
             placeholder="📚"
