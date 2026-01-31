@@ -3,6 +3,7 @@ import { MagnifyingGlassIcon } from '@heroicons/react/24/outline';
 import SEO from '../components/SEO';
 import CourseCard from '../components/CourseCard';
 import { COURSES } from '../constants/coursesData';
+import { SITE_INFO } from '../constants/siteData';
 
 const Courses = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -159,13 +160,13 @@ const Courses = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-4">
               <a
-                href={`tel:+919876543210`}
+                href={`tel:${SITE_INFO.phone}`}
                 className="bg-white text-primary-600 hover:bg-gray-100 font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-lg text-base sm:text-lg transition-colors duration-200 w-full sm:w-auto"
               >
-                Call Now: +91-9876543210
+                Call Now: {SITE_INFO.phone}
               </a>
               <a
-                href={`https://wa.me/919876543210?text=Hi! I'm interested in your courses. Can you help me choose the right one?`}
+                href={`https://wa.me/${SITE_INFO.phone}?text=Hi! I'm interested in your courses. Can you help me choose the right one?`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-green-600 hover:bg-green-700 font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-lg text-base sm:text-lg transition-colors duration-200 w-full sm:w-auto"
