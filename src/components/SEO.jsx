@@ -1,18 +1,18 @@
 import { Helmet } from 'react-helmet-async';
 import { SITE_INFO } from '../constants/siteData';
 
-const SEO = ({ 
-  title, 
-  description, 
-  keywords, 
-  image, 
+const SEO = ({
+  title,
+  description,
+  keywords,
+  image,
   url,
-  type = 'website' 
+  type = 'website',
 }) => {
   const siteTitle = title ? `${title} | ${SITE_INFO.name}` : SITE_INFO.name;
   const siteDescription = description || SITE_INFO.description;
   const siteUrl = url || window.location.href;
-  const siteImage = image || '/logo192.png';
+  const siteImage = image || `${import.meta.env.BASE_URL}logo.webp`;
 
   return (
     <Helmet>

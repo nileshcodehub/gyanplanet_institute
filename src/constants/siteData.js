@@ -13,11 +13,9 @@ export const SITE_INFO = {
   mapUrl:
     'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14031.52883364587!2d77.017513!3d28.452967!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d19b1c3c0944d%3A0x4cc5763d6b94a0dd!2sGyanplanet%20Institute%20-%20FREE%20trial%20classes%20and%20affordable%20pricing!5e0!3m2!1sen!2sin!4v1769693072336!5m2!1sen!2sin',
   socialMedia: {
-    facebook: 'https://facebook.com/gyanplanetinstitute',
-    twitter: 'https://twitter.com/gyanplanet',
-    instagram: 'https://instagram.com/gyanplanetinstitute',
-    linkedin: 'https://linkedin.com/company/gyanplanet_institute',
-    youtube: 'https://youtube.com/@gyanplanetinstitute',
+    facebook: 'https://www.facebook.com/gyanplanetinstitute/',
+    instagram: 'https://www.instagram.com/gyanplanetinstitute/',
+    youtube: 'https://www.youtube.com/@GyanplanetInstitute',
   },
 };
 

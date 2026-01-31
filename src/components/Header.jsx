@@ -7,7 +7,7 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
 
-  const isActive = (path) => location.pathname === path;
+  const isActive = path => location.pathname === path;
 
   return (
     <header className="bg-white shadow-lg sticky top-0 z-50">
@@ -15,18 +15,22 @@ const Header = () => {
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-primary-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-xl">G</span>
-            </div>
+            <img
+              src={`${import.meta.env.BASE_URL}logo.webp`}
+              alt="Gyanplanet Logo"
+              className="w-10 h-10 object-contain"
+            />
             <div>
-              <h1 className="text-xl font-bold text-gray-900">{SITE_INFO.name}</h1>
+              <h1 className="text-xl font-bold text-gray-900">
+                {SITE_INFO.name}
+              </h1>
               <p className="text-xs text-gray-600">{SITE_INFO.tagline}</p>
             </div>
           </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
-            {NAVIGATION.map((item) => (
+            {NAVIGATION.map(item => (
               <Link
                 key={item.name}
                 to={item.href}
@@ -49,10 +53,7 @@ const Header = () => {
             >
               {SITE_INFO.phone}
             </a>
-            <Link
-              to="/contact"
-              className="btn-primary text-sm"
-            >
+            <Link to="/contact" className="btn-primary text-sm">
               Get Started
             </Link>
           </div>
@@ -74,7 +75,7 @@ const Header = () => {
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-gray-200">
             <nav className="flex flex-col space-y-2">
-              {NAVIGATION.map((item) => (
+              {NAVIGATION.map(item => (
                 <Link
                   key={item.name}
                   to={item.href}
