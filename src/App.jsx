@@ -7,6 +7,7 @@ import Courses from './pages/Courses';
 import Books from './pages/Books';
 import Contact from './pages/Contact';
 import CourseDetail from './pages/CourseDetail';
+import Lectures from './pages/Lectures';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import './App.css';
 
@@ -24,6 +25,12 @@ function App() {
               <Route path="/books" element={<Books />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/courses/:slug" element={<CourseDetail />} />
+              <Route path="/lectures" element={<Lectures />} />
+              <Route path="/lectures/:playlistId" element={<Lectures />} />
+              <Route
+                path="/lectures/:playlistId/:videoId"
+                element={<Lectures />}
+              />
             </Routes>
           </main>
           <Footer />

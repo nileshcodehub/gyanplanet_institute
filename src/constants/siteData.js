@@ -206,6 +206,7 @@ export const NAVIGATION = [
   { name: 'Home', href: '/' },
   { name: 'Courses', href: '/courses' },
   { name: 'Books', href: '/books' },
+  { name: 'Lectures', href: '/lectures' },
   { name: 'Contact', href: '/contact' },
 ];
 
@@ -235,6 +236,7 @@ export const FOOTER_LINKS = {
   quickLinks: [
     { name: 'Courses', href: '/courses' },
     { name: 'Books', href: '/books' },
+    { name: 'Lectures', href: '/lectures' },
     { name: 'Contact', href: '/contact' },
   ],
   courses: [
