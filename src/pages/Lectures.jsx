@@ -17,6 +17,8 @@ const Lectures = () => {
   const navigate = useNavigate();
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [expandedPlaylists, setExpandedPlaylists] = useState({});
+  const [player, setPlayer] = useState(null);
+  const [isPaused, setIsPaused] = useState(false);
 
   // Initialize expanded state based on URL
   useEffect(() => {
@@ -67,6 +69,28 @@ const Lectures = () => {
         const nextVideo = currentPlaylist.videos[currentIndex + 1];
         navigate(`/lectures/${playlistId}/${nextVideo.id}`);
       }
+    }
+  };
+
+  const onPlayerReady = event => {
+    setPlayer(event.target);
+  };
+
+  const onPlayerStateChange = event => {
+    // PlayerState.PAUSED is 2
+    if (event.data === 2) {
+      setIsPaused(true);
+    }
+    // PlayerState.PLAYING is 1
+    if (event.data === 1) {
+      setIsPaused(false);
+    }
+  };
+
+  const handleResume = () => {
+    if (player) {
+      player.playVideo();
+      setIsPaused(false);
     }
   };
 
@@ -318,14 +342,36 @@ const Lectures = () => {
             ) : (
               // Video Player View
               <div className="space-y-6">
-                <div className="aspect-video w-full bg-black rounded-xl overflow-hidden shadow-lg">
+                <div className="aspect-video w-full bg-black rounded-xl overflow-hidden shadow-lg relative group">
                   <YouTube
                     videoId={videoId}
                     opts={videoOptions}
                     className="w-full h-full"
                     iframeClassName="w-full h-full"
                     onEnd={handleVideoEnd}
+                    onReady={onPlayerReady}
+                    onStateChange={onPlayerStateChange}
                   />
+                  {/* Custom Pause Overlay */}
+                  {isPaused && (
+                    <div
+                      className="absolute inset-0 z-10 bg-black/80 backdrop-blur-sm flex flex-col items-center justify-center cursor-pointer transition-opacity duration-300"
+                      onClick={handleResume}
+                    >
+                      <button
+                        className="bg-primary-600 hover:bg-primary-700 text-white rounded-full p-4 transform transition-all duration-300 hover:scale-110 shadow-xl"
+                        onClick={e => {
+                          e.stopPropagation();
+                          handleResume();
+                        }}
+                      >
+                        <PlayCircleIcon className="h-16 w-16" />
+                      </button>
+                      <p className="text-white mt-4 text-lg font-medium tracking-wide">
+                        Resume Lecture
+                      </p>
+                    </div>
+                  )}
                 </div>
                 <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
                   <h1 className="text-xl md:text-2xl font-bold text-gray-900 mb-2">
