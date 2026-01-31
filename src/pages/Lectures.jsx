@@ -9,6 +9,7 @@ import {
   XMarkIcon,
   VideoCameraIcon,
 } from '@heroicons/react/24/outline';
+import YouTube from 'react-youtube';
 import SEO from '../components/SEO';
 
 const Lectures = () => {
@@ -52,6 +53,32 @@ const Lectures = () => {
     togglePlaylist(pId);
     // If we want clicking the header to also navigate to the playlist view:
     navigate(`/lectures/${pId}`);
+  };
+
+  const handleVideoEnd = () => {
+    if (currentPlaylist && currentVideo) {
+      const currentIndex = currentPlaylist.videos.findIndex(
+        v => v.id === videoId
+      );
+      if (
+        currentIndex !== -1 &&
+        currentIndex < currentPlaylist.videos.length - 1
+      ) {
+        const nextVideo = currentPlaylist.videos[currentIndex + 1];
+        navigate(`/lectures/${playlistId}/${nextVideo.id}`);
+      }
+    }
+  };
+
+  const videoOptions = {
+    height: '100%',
+    width: '100%',
+    playerVars: {
+      autoplay: 1,
+      rel: 0,
+      modestbranding: 1,
+      showinfo: 0,
+    },
   };
 
   return (
@@ -292,13 +319,13 @@ const Lectures = () => {
               // Video Player View
               <div className="space-y-6">
                 <div className="aspect-video w-full bg-black rounded-xl overflow-hidden shadow-lg">
-                  <iframe
-                    src={`https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`}
-                    title={currentVideo?.title}
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                    className="w-full h-full border-0"
-                  ></iframe>
+                  <YouTube
+                    videoId={videoId}
+                    opts={videoOptions}
+                    className="w-full h-full"
+                    iframeClassName="w-full h-full"
+                    onEnd={handleVideoEnd}
+                  />
                 </div>
                 <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
                   <h1 className="text-xl md:text-2xl font-bold text-gray-900 mb-2">
